@@ -1,0 +1,21 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+
+   <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    
+    <H1> Given </H1>
+    
+    <P> Two numbers to be calculated and the sum should be as a result</P>
+    
+     <H1> When </H1>
+     <P> I provide two numbers : <span concordion:set="#num1">5</span> and <span concordion:set="#num2">10</span> </P>
+     
+     <span concordion:execute="#result = calculate(#num1,#num2)"></span>
+      <span concordion:execute="#result1 = testMultiplication(#num1,#num2)"></span>
+     
+     <H1> Then </H1>
+	 <P> The Calculated number is : <span concordion:assert-equals="#result">15</span></P>
+	 <P> The Calculated number is : <span concordion:assert-equals="#result1">50</span></P>
+
+</html>
